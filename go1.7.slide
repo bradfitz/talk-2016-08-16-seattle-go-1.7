@@ -251,7 +251,7 @@ The provided context is used to kill the process (by calling `os.Process.Kill`) 
 
 The testing package now supports the definition of tests with subtests and benchmarks with sub-benchmarks. This support makes it easy to write table-driven benchmarks and to create hierarchical tests. It also provides a way to share common setup and tear-down code.
 
-- [[http://deeeet.com/writing/2016/08/02/go1_7-subtest/][Go1.7のSubtestsとSub-benchmarks]]
+- [[https://elliot.land/go-subtests-and-sub-benchmarks][Go: Subtests and Sub-benchmarks]]
 
 * Testing (before)
 
