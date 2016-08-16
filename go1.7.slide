@@ -127,6 +127,14 @@ Now the slowdown is 2.2x than 1.4.3 🎉
 
 > 10% faster for any non trivial binary, and up to 30% faster for large binaries like jujud.
 
+* Happy User #1
+
+.image img/happy1.png 400 _
+
+* Happy User #2
+
+.image img/happy2.png _ 400
+
 * Compiler Toolchain (Stack frame)
 
 On x86-64 systems, Go programs now maintain stack frame pointers as expected by profiling tools like Linux's perf and Intel's VTune, making it easier to analyze and optimize Go programs using these tools.
@@ -175,13 +183,13 @@ The minimal source code for a binary-only package,
 
 Full example is on [[https://github.com/tcnksm/go-binary-only-package][tcnksm/go-binary-only-package]]
 
-* Go Vet (-tests)
+* go vet (-tests)
 
 Adds a new `-tests` check that checks the name and signature of likely test functions.
 
     func TestbadSuffix(*testing.T) {} // ERROR "first letter after 'Test' must not be lowercase"
 
-* Go Vet (-lostcancel)
+* go vet (-lostcancel)
 
 Add a new `-lostcancel` that checks which detects failure to call the cancelation function returned by the `WithCancel`, `WithTimeout`, and `WithDeadline` functions in Go 1.7's new context package.
 
@@ -211,6 +219,10 @@ There have been significant optimizations bringing more than *10%* improvements 
 Garbage collection pauses should be significantly shorter than they were in Go 1.6 for programs with large numbers of idle goroutines, substantial stack size fluctuation, or large package-level variables.
 
 - [[https://blog.twitch.tv/gos-march-to-low-latency-gc-a6fa96f06eb7#.4zczmgdlo][Go's march to low-latency GC]]
+
+SSA optimizations to improve the GC's hot paths.
+
+Idle goroutines not scanned.
 
 * Standard library
 
@@ -287,3 +299,19 @@ You can pass `httptrace` hooks via `Context`
 * Standard library
 
 And a lot of minor changes 👍
+
+* Looking forward to Go 1.8
+
+Tree opened last night.
+
+145 commits in already.
+
+Plan: SSA for all architectures.
+
+Plan: more SSA optimizations
+
+Plan: optimize compiler frontend
+
+Pony: sort.Slice?
+
+See [[https://groups.google.com/forum/#!topic/golang-dev/098vr4999Tk][planning thread]].
