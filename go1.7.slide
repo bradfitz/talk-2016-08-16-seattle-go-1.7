@@ -1,33 +1,22 @@
-Go 1.7 Release Party in Tokyo
-GoCon Tokyo
-8 Aug 2016
+Go 1.7
+Go Meetup Seattle
+16 Aug 2016
 
-Taichi Nakashima
-@deeeet
+Brad Fitzpatrick
+@bradfitz
 
-* About me
+* Props
 
-.image img/deeeet.png 200 _
+Thanks to Taichi Nakashima.
+
+I stole his slides.
+
+Yay Open Source!
+
+He is:
 
 - *@deeeet* / *@tcnksm* (GitHub)
 - [[http://deeeet.com][http://deeeet.com]]
-- A PaaS Dev&Ops (Using CloudFoundry)
-
-* OSS
-
-Tools
-
-- [[https://github.com/tcnksm/gcli][gcli]] - The easy way to build Golang command-line application
-- [[https://github.com/tcnksm/gotests][gotests]] - A tool to generate Go test functions from the given source code like gofmt
-- [[https://github.com/tcnksm/ghr][ghr]] - Create Github Release and upload artifacts in parallel
-- [[https://github.com/tcnksm/license][license]] - Generate LICENSE file you want
-- [[https://github.com/rakutentech/kafka-firehose-nozzle][kafka-firehose-nozzle]] - Integrate CloudFoundry with [[http://kafka.apache.org/][Apache Kafka]]
-
-Packages
-
-- [[https://github.com/tcnksm/go-input][go-input]] - Go package for ideal tty prompt
-- [[https://github.com/tcnksm/go-latest][go-latest]] - Simple way to check version is latest or not from various sources in Go
-- [[https://github.com/rakutentech/go-nozzle][go-nozzle]] - Go package for building CloudFoundry nozzle
 
 * Welcome
 
@@ -35,29 +24,60 @@ Let's celebrate the release of Go1.7.
 
 * Welcome
 
-Not yet released (8 Aug) ...
-
-* Welcome
-
 This event is fork of [[https://github.com/golang/go/wiki/Go-1.6-release-party][Go1.6 release party]] by @davecheney. It's not the world wide event like before ... 😭
 
-(But it seems release party will be held [[http://connpass.com/event/37499/?utm_campaign=event_publish_to_follower&utm_medium=twitter&utm_source=notifications][in Okayama, Japan]] and [[https://twitter.com/jesserlucas/status/762327252994396160][in Louisville, Kentucky]])
+This presentation is based _heavily_ on the [[https://golang.org/doc/go1.7][official Go 1.7 release notes]].
 
-This presentation is based _heavily_ on the [[http://tip.golang.org/doc/go1.7][official Go 1.7 release notes]].
+* History
+
+2008-03: initial brainstorming
+2009-11: Go open source
+201x-xx: bunch of weekly & rNN releases
+2012-03: Go1
+
+Go 1 introduced the [[https://golang.org/doc/go1compat.html][Go 1 compatibility guarantee]].
+
+2013-05: Go1.1
+
+Too long.
+
+* Six month release cycles
+
+Decided to do 6 month release cycles.
+
+3 months of hacking, 3 months of stability.
+
+* Go 1.x
+
+2013-05: Go1.1
+2013-12: Go1.2
+2014-06: Go1.3
+2014-12: Go1.4
+
+Then observed we were on a summer & winter holiday cycle, which
+sucked. Did a one-time adjustment with an 8 month cycle to shift the
+pattern:
+
+2015-08: Go1.5 (Go now written in Go)
+2016-02: Go1.6
 
 * Go 1.7
 
-The latest Go release, version 1.7, arrives six months after 1.6 (17 February).
+Go 1.7 was released yesterday (Monday Aug 15th).
 
-Most of its changes are in the implementation of the toolchain, runtime, and libraries. There are no changes to the language specification.
+6 months after Go 1.6.
 
-As always, the release maintains the [[http://tip.golang.org/doc/go1compat.html][Go 1 compatibility guarantee]].
+* Go 1.7
 
-Almost all Go programs are expected to continue to compile and run as before.
+Most of its changes are in the implementation of the toolchain, runtime, and libraries.
+
+There are no changes to the language specification.
+
+This is intentional. See [[https://docs.google.com/presentation/d/1JsCKdK_AvDdn8EkummMNvpo7ntqteWQfynq9hFTCkhQ/present][my GopherconIndia presentation]] ("Introducing Go 1.6: asymptotically approaching boring")
 
 * New ports
 
-macOS 10.12 Sierra (This support was backported to Go 1.6.3. Binaries built with versions of Go before 1.6.3 will not work correctly on Sierra)
+macOS 10.12 Sierra (maybe! Go 1.7 might work. Go 1.6.3 did but now won't. Maybe Go 1.6.4 will.)
 
 Experimental port to Linux on z Systems (linux/s390x)
 
