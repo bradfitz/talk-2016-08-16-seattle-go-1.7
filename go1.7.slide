@@ -99,6 +99,8 @@ The new back end, based on SSA, generates more compact, more efficient code and 
 
 For this release, the new back end can be disabled by passing `-ssa=0` to the compiler.
 
+If reading online, see [[https://pauladamsmith.com/blog/2016/08/go-1.7-ssa.html][Looking at your program’s structure in Go 1.7]] in lieu of a live demo.
+
 * Compiler Toolchain (New export)
 
 The format of exported metadata written by the compiler in package archives has changed: the old textual format has been replaced by a more compact *binary* *format*.
